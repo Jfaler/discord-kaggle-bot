@@ -1,4 +1,3 @@
-# bot.py
 import os
 import sys
 import discord
@@ -9,6 +8,7 @@ import random
 
 from datetime import datetime as dt
 from kaggle.api.kaggle_api_extended import KaggleApi
+from kaggle.api_client import ApiClient
 from discord.ext import commands
 from dotenv import load_dotenv
 from pytz import timezone
@@ -28,8 +28,8 @@ token = os.getenv('DISCORD_TOKEN')
 # This will set the command prefix
 bot = commands.Bot(command_prefix='!')
 
-# This function will list all current competitions
-@bot.command(name='comp', help='Responds with a list of competitions')
+# This function will list all 🏆 current competitions
+@bot.command(name='competitions', help='Responds with a list of competitions')
 async def competitions(comp):
     now = dt.now()
     now = now.astimezone(timezone('UTC'))
@@ -43,26 +43,36 @@ async def competitions(comp):
             if diff.days > 0:
                 await comp.send('{}: {}'.format(i18n.t('kaggle.to_go', days=diff.days), getattr(competition, 'title')))
 
-# This function will list all datasets
-@bot.command(name='datasets', help='Responds with a list of datasets')
+# This function will list all datasets sorted by 💪 active
+@bot.command(name='datasets', help='Responds with a list of datasets sorted by active')
 async def datasets(ds):
-    datasets = api.dataset_list()
+    await ds.send(i18n.t('kaggle.datasets'))
+    datasets = api.dataset_list(sort_by='hottest')
     response = datasets
-    await ds.send(response)
+    await ds.send('\n'.join('{}: {}'.format(*response) for response in enumerate(response)))
 
-# This function will list all kernels
-@bot.command(name='kernels', help='Responds with a list of kernels')
-async def leaderboard(kernels):
-    kernel = api.kernels_list()
+# This function will list all 🏥 health datasets sorted by active
+@bot.command(name='health', help='Responds with a list of datasets sorted by active')
+async def heatlh(healthDataset):
+    await healthDataset.send(i18n.t('kaggle.health'))
+    hDatasets = api.dataset_list(tag_ids='health', sort_by='hottest')
+    response = hDatasets
+    await healthDataset.send('\n'.join('{}: {}'.format(*response) for response in enumerate(response)))
+
+# This function will list all 💼 education datasets sorted by hottest
+@bot.command(name='education', help='Responds with a list of computing related datasets sorted by hottest')
+async def education(edu):
+    await edu.send(i18n.t('kaggle.education'))
+    edu = api.dataset_list(tag_ids='education', sort_by='hottest')
+    response = edu
+    await edu.send('\n'.join('{}: {}'.format(*response) for response in enumerate(response)))
+
+# This function will list all kernels sorted by hotness 🔥
+@bot.command(name='kernels', help='Responds with a list of kernels sorted by hotness')
+async def kernel(kernels):
+    await kernels.send(i18n.t('kaggle.kernels'))
+    kernel = api.kernels_list(page_size=50, sort_by='hotness')
     response = kernel
-    await kernels.send(response)
-
-# This function will list all kernels
-@bot.command(name='lb', help='Responds with Leaderboard')
-async def files(ctx):
-    ctx = api.competitions_submissions_list()
-    response = random.choice(ctx)
-    await ctx.send(response)
-
+    await kernels.send('\n'.join('{}: {}'.format(*response) for response in enumerate(response)))
 
 bot.run(token)
