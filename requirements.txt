@@ -1,0 +1,6 @@
+discord==1.0.1
+discord.py==1.2.3
+kaggle==1.5.5
+python-dotenv==0.10.3
+python-i18n[YAML]==0.3.6
+pytz==2019.2
