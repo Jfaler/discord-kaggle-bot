@@ -3,5 +3,4 @@ en:
   to_go: '(%{days} days to go)'
   datasets: "Top 20 Current Active 💪 Datasets:"
   kernels: "Top 50 Hottest 🔥 kernels:"
-  health: "Top 20 current 🏥 Health Datasets:"
-  education: "Top 20 💻 Education Datasets:"
+  health: "Top 20 Hottest 🏥 Health Datasets:"
