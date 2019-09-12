@@ -10,11 +10,6 @@
   Kaggle discord bot with commands.
 </p>
 
-
-## 📝 Table of Contents
-
-- [Features](#features)
-
 ## Translations
 :memo: Available Translations: 🇬🇷 [ελληνικά](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇫🇷 [Français](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇰🇷 [한국어](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/KO_README.md) | 🇨🇳 [普通話](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇹🇼 [台灣話](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇲🇽 [Español](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇹🇷 [Türkçe](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇩🇪 [Deutsch](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇮🇹 [Italiano](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇮🇳 [हिन्दी](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | [Arabic](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇵🇹 [Português](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇷🇺 [Русский язык](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇯🇵 [日本語](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/) | 🇻🇳 [tiếng việt](https://github.com/Jfaler/discord-kaggle-bot/blob/master/doc/)
 
