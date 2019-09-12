@@ -47,12 +47,12 @@ async def competitions(comp):
 @bot.command(name='datasets', help='Responds with a list of datasets sorted by active')
 async def datasets(ds):
     await ds.send(i18n.t('kaggle.datasets'))
-    datasets = api.dataset_list(sort_by='hottest')
+    datasets = api.dataset_list(sort_by='active')
     response = datasets
     await ds.send('\n'.join('{}: {}'.format(*response) for response in enumerate(response)))
 
-# This function will list all 🏥 health datasets sorted by active
-@bot.command(name='health', help='Responds with a list of datasets sorted by active')
+# This function will list all 🏥 health datasets sorted by hottest
+@bot.command(name='health', help='Responds with a list of datasets sorted by hottest')
 async def heatlh(healthDataset):
     await healthDataset.send(i18n.t('kaggle.health'))
     hDatasets = api.dataset_list(tag_ids='health', sort_by='hottest')
