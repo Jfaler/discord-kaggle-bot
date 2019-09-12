@@ -1,5 +1,14 @@
-# discord-kaggle-bot
-Kaggle discord bot with commands.
+<p align="center">
+<img src="https://i.imgur.com/gnQOePm.png" width="140" align="center">
+  </p>
+<p align="center">
+  <a href="https://bitlits.com">
+  </a>
+</p>
+
+<p align="center">
+  Kaggle discord bot with commands.
+</p>
 
 
 ## 📝 Table of Contents
@@ -38,7 +47,7 @@ Kaggle discord bot with commands.
 ## 🚀 Installation & Deployment
 
 * <p>Sign up with <a target="_blank" href="https://m.do.co/c/397fb2277475">Digital Ocean</a><img width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
-* Edit the configuration file `sudo nano /discord-kaggle-bot/env.sample`
+* Edit the configuration file `sudo nano /discord-kaggle-bot/.env.sample`
 * Install Python 3.6 `sudo apt-get install python3.6`
 * Install pip3 `sudo apt-get install pip3`
 * Install dependencies `sudo pip3 install -r requirements.txt`
