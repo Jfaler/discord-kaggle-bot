@@ -4,8 +4,6 @@ import discord
 import random
 import kaggle
 import i18n
-import random
-
 from datetime import datetime as dt
 from kaggle.api.kaggle_api_extended import KaggleApi
 from kaggle.api_client import ApiClient
